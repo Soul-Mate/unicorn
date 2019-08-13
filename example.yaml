@@ -1,0 +1,79 @@
+etcd:
+  # etcd connection cluster
+  cluster:
+  - "192.168.10.10:2379"
+  - "192.168.10.11:2379"
+
+  enableTls: false
+
+  clientAuth: false
+
+  # if enable client auth, configure it
+  caFile: ""
+
+  # if enable tls, configure it
+  certFile: ""
+
+  # if enable tls, configure it
+  keyFile: ""
+
+  # report timestamp to etcd second
+  report: 3
+
+  # etcd connection timeout second
+  timeout: 5
+
+  # local report file. default: /tmp/unicorn-report.gob
+  localReportFile: "unicorn-report.bin"
+
+  # local report second. default: 90
+  localReport: 60
+
+id:
+  epoch: 1539660973223
+
+  machineId: 1
+
+  machineIp: "127.0.0.1"
+
+  # 0: use local 1: use etcd
+  machineIdType: 0
+
+  # 0: use second 1: use million second
+  idType: 1
+
+  # optional: 0 or 1
+  version: 1
+
+http:
+  addr: ":6001"
+  enableTls: false
+  caFile: ""
+  certFile: ""
+  keyFile: ""
+  clientAuth: false
+
+grpc:
+  addr: ":6002"
+  enableTls: false
+  certFile: ""
+  serverName: ""
+
+log:
+  # default: error
+  level: "info|warning|error|debug"
+
+  # console|file|network
+  output:  "console|file"
+
+  # default: /var/run/log/unicorn
+  filePath: "./"
+
+  # default: unicorn
+  filePrefix: ""
+
+  # default: .log
+  fileSuffix: ""
+
+  # default: false
+  split: true

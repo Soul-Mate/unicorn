@@ -1,0 +1,6 @@
+.idea
+*.exe
+server.pem
+server-key.pem
+*.bin
+*.log
